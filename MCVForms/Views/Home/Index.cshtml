@@ -1,0 +1,32 @@
+﻿@model MCVForms.Models.StudentModel
+<h2>MCV Forms - Model Binding</h2>
+@using (Html.BeginForm())
+            {
+                <table>
+                    <tr>
+                        <td> Enter ID: </td>
+                        <td>@Html.TextBoxFor(m => m.Id)</td>
+                    </tr>
+                    <tr>
+                        <td> Enter Name: </td>
+                        <td>@Html.TextBoxFor(m => m.Name)</td>
+                    </tr>
+                    <tr>
+                        <td> Enter Course: </td>
+                        <td>@Html.TextBoxFor(m => m.courseModel.Course)</td>
+                    </tr>
+                    <tr>
+                        <td> Enter Duration: </td>
+                        <td>@Html.TextBoxFor(m => m.courseModel.Duration)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="submit"/></td>
+                    </tr>
+                </table>
+            }
+<h4>
+    ID: @ViewBag.Id<br />
+    Name: @ViewBag.Name<br />
+    Course: @ViewBag.Course<br />
+    Duraion: @ViewBag.Duration<br />
+</h4>
